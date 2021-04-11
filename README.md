@@ -2,9 +2,9 @@
 Metron project tackles use case of measurement of objects.
 
 ## Table of Content
-[1. Project Installation](/docs/project_installation.md)
-[2. Architecture](/docs/architecture.md)
-[3. Development Notes](/docs/development_notes.md)
+[1. Project Installation](/docs/project_installation.md)\
+[2. Architecture](/docs/architecture.md)\
+[3. Development Notes](/docs/development_notes.md)\
 
 ## Roadmap
 ### 0.1.0 (April - May 2021)
