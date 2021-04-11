@@ -9,7 +9,9 @@ database), only visual displaying.
 ## Architecture Description
 A reference architecture is based on *Linux* OS running on *x86* *desktop/laptop machine*.
 ![High Level Architecture](images/high_level_architecture.png)
+
 The solution is consisted of five components.
+
 ### Metron Conduit
 Metron Conduit represents an input of the solution. As its name suggests, it transmits source video stream over network 
 to other Metron's components. Video file (TODO: formats) or camera (IP/USB) can be used. Component is based on 
