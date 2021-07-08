@@ -35,9 +35,7 @@ repos:
     -   id: pylint
         types:
             - python
-        # '--disable=duplicate-code' stands for almost the same preprocessing scripts for different datasets, but makes
-        # sense to avoid putting them together or exposing as functions
-        args: ['--disable=C0330, C0326, E0401', '--max-line-length=120']
+        args: ['--disable=C0330, C0326, E0401, duplicate-code', '--max-line-length=120']
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: ''
     hooks:
