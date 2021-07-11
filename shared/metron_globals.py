@@ -1,5 +1,5 @@
 """
-Global common variables and constants.
+Metron global common variables and constants.
 """
 
 import asyncio
