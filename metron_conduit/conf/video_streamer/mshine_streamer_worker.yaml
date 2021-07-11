@@ -1,0 +1,6 @@
+defaults:
+  - base_streamer_worker@mshine_streamer_worker # do not touch
+
+mshine_streamer_worker:
+  port: 13101
+  stream_fps: 10

@@ -1,0 +1,9 @@
+defaults:
+  - base_streamer_worker_schema # do not touch
+
+address: "127.0.0.1"
+port: ???
+com_protocol: "tcp"
+com_pattern: 0
+stream_frame_res: ???
+stream_fps: 10

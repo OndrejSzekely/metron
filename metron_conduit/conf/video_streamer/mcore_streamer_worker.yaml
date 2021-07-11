@@ -1,0 +1,6 @@
+defaults:
+  - base_streamer_worker@mcore_streamer_worker # do not touch
+
+mcore_streamer_worker:
+  port: 13100
+  stream_fps: 3
