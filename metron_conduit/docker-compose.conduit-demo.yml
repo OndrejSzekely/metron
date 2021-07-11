@@ -1,0 +1,30 @@
+# DO NOT TOUCH
+version: "3.8"
+services:
+  metron_conduit:
+    build:
+      context: ..
+      dockerfile: metron_conduit/Dockerfile
+    image: metron/metron_conduit:latest
+    container_name: metron_conduit
+    expose:
+      - ${METRON_CORE_STREAM_PORT}
+      - ${METRON_SHINE_STREAM_PORT}
+    command: python metron_conduit_run.py video_streamer.mshine_streamer_worker.address=${METRON_SHINE_HOSTNAME}
+               video_streamer.mcore_streamer_worker.address=${METRON_CORE_HOSTNAME}
+               video_streamer.mshine_streamer_worker.port=${METRON_SHINE_STREAM_PORT}
+               video_streamer.mcore_streamer_worker.port=${METRON_CORE_STREAM_PORT} source_connector=file_source
+               source_connector.file_path=/metron/metron_conduit/sample_video.mp4
+               source_connector.transcoding_resolution=[1280,720]
+               video_streamer.mshine_streamer_worker.stream_frame_res=[1280,720]
+               video_streamer.mcore_streamer_worker.stream_frame_res=[1280,720]
+               hydra.verbose=true
+  metron_conduit_receiver_demo:
+    depends_on:
+      - metron_conduit
+    image: metron/metron_conduit:latest
+    container_name: metron_conduit_receiver_demo
+    expose:
+      - "${METRON_CORE_STREAM_PORT}"
+    command: python demo/metron_conduit_receiver.py -t container -p ${METRON_CORE_STREAM_PORT}
+
