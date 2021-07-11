@@ -42,8 +42,8 @@ repos:
     -   id: mypy
         types:
             - python
-        args: ['--disallow-untyped-calls', '--disallow-untyped-defs', '--disallow-incomplete-defs',
-               '--disallow-untyped-decorators', '--no-implicit-optional', '--warn-redundant-casts',
+        args: ['--show-error-codes', '--disallow-untyped-calls', '--disallow-untyped-defs',
+               '--disallow-incomplete-defs', '--disallow-untyped-decorators', '--no-implicit-optional', '--warn-redundant-casts',
                '--ignore-missing-imports']
 -   repo: https://github.com/PyCQA/bandit
     rev: 1.7.0
