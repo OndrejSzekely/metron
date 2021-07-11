@@ -30,15 +30,15 @@ class Singleton:
         """
         self._decorated_object = decorated_object
 
-    def __call__(self, *args: typing.List[typing.Any], **kwargs: typing.Dict[str, typing.Any]) -> typing.Any:
+    def __call__(self, *args: typing.Any, **kwargs: typing.Any) -> typing.Any:
         """
         It checks if decorated object was not already instantiated or called.
         If does not, it allows to create / call it. The method is called when decorator
         is applied on class / function / method.
 
         Args:
-            *args (typing.List[typing.Any]): Positional arguments.
-            **kwargs (typing.Dict[str, typing.Any]): Key-worded arguments.
+            *args (typing.Any): Positional arguments.
+            **kwargs (typing.Any): Key-worded arguments.
 
         Returns (Typing.Any): Decorated object itself without change.
 

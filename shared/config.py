@@ -80,16 +80,14 @@ class GetHydraConfig:
         """
         self._decorated_func = decorated_func
 
-    def __call__(
-        self, *args: typing.List[typing.Any], **kwargs: typing.Dict[str, typing.Any]
-    ) -> typing.Callable[..., typing.Any]:
+    def __call__(self, *args: typing.Any, **kwargs: typing.Any) -> typing.Callable[..., typing.Any]:
         """
         Passes Hydra's config, stored in <config> global variable, as a first argument of the function / method.
         The method is called when decorator is applied on class method or function.
 
         Args:
-            *args (typing.List[typing.Any]): Positional arguments.
-            **kwargs (typing.Dict[str, typing.Any]): Key-worded arguments.
+            *args (typing.Any): Positional arguments.
+            **kwargs (typing.Any): Key-worded arguments.
 
         Returns (typing.Callable[..., typing.Any]): Decorated function which takes Hydra's config as the
             first input argument.

@@ -52,13 +52,13 @@ def create_structured_config_schema(
         schema_registering_function(config_store)
 
         @wraps(hydra_main_func)
-        def hydra_main_decorator(*args: typing.List[typing.Any], **kwargs: typing.Dict[str, typing.Any]) -> DictConfig:
+        def hydra_main_decorator(*args: typing.Any, **kwargs: typing.Any) -> DictConfig:
             """
             Decorator wrapped of Hydra's main function.
 
             Args:
-                *args (typing.List[typing.Any]): Positional arguments.
-                **kwargs (typing.Dict[str, typing.Any]): Key-worded arguments.
+                *args (typing.Any): Positional arguments.
+                **kwargs (typing.Any): Key-worded arguments.
 
             Returns (DictConfig): Hydra's configuration.
             """
