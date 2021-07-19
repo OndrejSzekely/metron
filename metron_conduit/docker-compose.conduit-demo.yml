@@ -13,7 +13,8 @@ services:
     command: python metron_conduit_run.py video_streamer.mshine_streamer_worker.address=${METRON_SHINE_HOSTNAME}
                video_streamer.mcore_streamer_worker.address=${METRON_CORE_HOSTNAME}
                video_streamer.mshine_streamer_worker.port=${METRON_SHINE_STREAM_PORT}
-               video_streamer.mcore_streamer_worker.port=${METRON_CORE_STREAM_PORT} source_connector=file_source
+               video_streamer.mcore_streamer_worker.port=${METRON_CORE_STREAM_PORT}
+               source_connector=file_source
                source_connector.file_path=/metron/metron_conduit/sample_video.mp4
                source_connector.transcoding_resolution=[1280,720]
                video_streamer.mshine_streamer_worker.stream_frame_res=[1280,720]
