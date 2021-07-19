@@ -8,7 +8,40 @@ the development tools too.
 ## End User Installation
 
 ### Docker Compose Installation
-[comment]: <> (TODO)
+
+To be able to run Metron using Docker Compose, perform following steps:
+
+1. Install Docker ([how to install](https://docs.docker.com/get-docker/)).
+2. Install Docker Compose ([how to install](https://docs.docker.com/compose/install/)).
+
+Configuration of the installation is given by following files located in Metron's root folder:
+
+- `.env`: Sets environmental variables used by Docker Compose YAML files.
+- `docker-compose.override.yml`: Overrides Docker Compose configuration by user specified settings.
+
+**Configuration options of each component is described in each component's README file.**
+
+When the configuration is completed, open terminal and go to Metron's root folder and run following command to build
+Metron:
+
+```shell
+docker-compose build
+```
+
+When the building process is completed, you can deploy Metron by running following command from Metron's root folder:
+
+```shell
+docker-compose up
+```
+
+To stop Metron press Ctrl+C and to turn it off, run following command from Metron's root folder:
+
+```shell
+docker-compose down
+```
+
+**Metron's configuration can be changed anytime in the config files. Metron rebuilding is requiered for some 
+configuration parameters, but not for others. Details can be found in each component's README file.**
 
 ## Development Installation
 
@@ -24,6 +57,10 @@ This option assumes that developer's Python IDE is capable of using Docker Compo
 
 1. Install Docker ([how to install](https://docs.docker.com/get-docker/)).
 2. Install Docker Compose ([how to install](https://docs.docker.com/compose/install/)).
+
+In IDE setup Docker Compose Python interpreter for each Metron's component which is represented by corresponding Docker
+Compose service. Usually, IDE uses particular Docker image, but execution command has to be specified by user with
+run/debug IDE configuration.
 
 ### Option 2: Using Bare Metal
 
@@ -51,16 +88,16 @@ section of each step.
    ```
 
 3. Install dev tools for commits validation: *Black*, *Pylint*, *Flake8*, *MyPy* and *Bandit*.
-   
+
    When manual installation is used, use following config files which modifies default setting of the tools:
-   - `pyproject.toml`: Customized Black settings and customized Pylint settings.
-   - `.flake8`: Customized Flake8 setting.
-   
-   The alternative option is using *pre-commit* tool. This tools uses Git Hooks to run automatically all 
-   the tools before commit making. The configuration of *pre-commit* (including tool configurations) is located in 
-   *.pre-commit-config.yaml*. There is no need of tools manual installation using this option. To understand how 
-   work with *pre-commit*, take a look into [docs](https://pre-commit.com/#usage).
-   
+	- `pyproject.toml`: Customized Black settings and customized Pylint settings.
+	- `.flake8`: Customized Flake8 setting.
+
+   The alternative option is using *pre-commit* tool. This tools uses Git Hooks to run automatically all the tools
+   before commit making. The configuration of *pre-commit* (including tool configurations) is located in
+   *.pre-commit-config.yaml*. There is no need of tools manual installation using this option. To understand how work
+   with *pre-commit*, take a look into [docs](https://pre-commit.com/#usage).
+
    ##### :bulb: Reference Installation Steps :point_down:
    Go into the project's root folder and run following command attached Conda environment to install *pre-commit*:
    ```shell
@@ -150,15 +187,15 @@ section of each step.
 
    ##### :bulb: Reference Installation Steps :point_down:
    **You have to close the terminal session after the installation.**
-   
-   To run Metron's component in a new terminal session, run following commands in **Metron's root directory** to 
+
+   To run Metron's component in a new terminal session, run following commands in **Metron's root directory** to
    activate the environments:
    ```shell
    conda activate metron
    source "$( poetry env list --full-path )/bin/activate"
    ```
    Then run the execution command for given component.
-   
+
    To deactivate Poetry's and Conda's virtual environment run following commands:
    ```shell
    deactivate
