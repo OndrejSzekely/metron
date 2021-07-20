@@ -7,7 +7,7 @@ the development tools too.
 
 ## End User Installation
 
-### Docker Compose Installation
+### Docker Compose
 
 To be able to run Metron using Docker Compose, perform following steps:
 
