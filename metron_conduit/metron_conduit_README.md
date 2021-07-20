@@ -145,7 +145,7 @@ root folder and run following command:
 > ##### :warning: Attention :exclamation: :raised_hands: :exclamation:
 > To run the receiver application on the host, all Metron's dependencies have to be installed on a bare metal or in
 > a virtual environment and the virtual environment has to attached into the console.
-> See [Development Installation: Option 2](../docs/project_installation.md)
+> See [Development Installation: Option 2](../docs/project_installation.md#option-2:-using-bare-metal)
 
 ```shell
 python demo/metron_conduit_receiver.py -t docker_host -p 13101
@@ -161,12 +161,12 @@ docker-compose -f docker-compose.conduit-demo.yml --env-file .env.conduit.demo d
 
 ## Running Commands
 
-Based on used installation type (see [project installation guide](../docs/project_installation.md)), use one of the
+Based on used installation type (see [project installation guide](../docs/project_installation.md#)), use one of the
 following ways.
 
 ### End User Installation - Docker Compose
 
-Section *End User Installation: Docker Compose* in [Project Installation](../docs/project_installation.md)
+Section [End User Installation: Docker Compose](../docs/project_installation.md#docker-compose)
 describes how to start Metron.
 
 **Only Metron Conduit Docker Compose configuration options highlighted by

@@ -17,18 +17,20 @@ the function / class method itself.
 **Max Line Length**: It is set to 120 characters.
 
 ### Commits Validation
+
 Every commit has to pass through and be compliant with following tools:
+
 - *Black* (automatic styling formatting)
 - *Pylint* (linter)
 - *Flake8* (linter)
 - *MyPy* (annotations check)
 - *Bandit* (vulnerabilities check)
 
-The default configuration/standards of the tools is slightly modified generally and occasionally, there is a 
-particular PEP message disabling on a line level in the code.
+The default configuration/standards of the tools is slightly modified generally and occasionally, there is a particular
+PEP message disabling on a line level in the code.
 
-Tools could be installed manually by a user or **using *pre-commit*** tool which integrates all the tools. 
-**This is also the preferred way.** See [Project Installation](../docs/project_installation.md) for more details about 
+Tools could be installed manually by a user or **using *pre-commit*** tool which integrates all the tools.
+**This is also the preferred way.** See [Project Installation](../docs/project_installation.md) for more details about
 *pre-commit* installation and location of modified configuration files.
 
 ### Docstring
@@ -61,10 +63,9 @@ YAML comments convention should follow [Python docstring](#docstring) convention
 Metron does not use any main all YAML config parameters validation routine. Hydra does validation of expected config
 parameters and their type. In the code, configuration variable is accessed whenever is needed using specific decorator,
 applied on a function or class method. It passes the configuration variable as the first parameter in the function /
-class method. Therefore, the same principle as in [Parameters Validation]
-(#parameters-validation) is followed. The function / class method has to validate required config parameter values and
-if the requirements are not met, raise `ValueError` with custom message referring to the particular YAML config
-parameter.
+class method. Therefore, the same principle as in [Parameters Validation](#parameters-validation) is followed. The
+function / class method has to validate required config parameter values and if the requirements are not met,
+raise `ValueError` with custom message referring to the particular YAML config parameter.
 
 ## Diagram Drawings
 
