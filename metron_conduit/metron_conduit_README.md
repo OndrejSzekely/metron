@@ -112,7 +112,7 @@ system.
 > ##### :warning: Attention :exclamation: :raised_hands: :exclamation:
 > Demo uses ports `13100` and `13101`. If ports are already in use, change them to different ones.
 
-Open a terminal, go into Metron's root folder and run following commands:
+Open a terminal / cmd, go into Metron's root folder and run following commands:
 
 ```shell
 cd metron_conduit
@@ -150,6 +150,8 @@ root folder and run following command:
 > To run the receiver application on the host, all Metron's dependencies have to be installed on a bare metal or in
 > a virtual environment and the virtual environment has to attached into the console.
 > See [Development Installation: Option 2](../docs/project_installation.md#option-2-using-bare-metal)
+> 
+> It is not possible to run receiver application on a host with Windows.
 
 ```shell
 python demo/metron_conduit_receiver.py -t docker_host -p 13101

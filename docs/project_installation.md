@@ -69,6 +69,10 @@ Follow the general steps to install the solution or even more, go command by com
 > ##### :bulb: Reference Installation Steps :point_down:
 section of each step.
 
+> ##### :warning: Attention :exclamation: :raised_hands: :exclamation:
+> Currently, this installation type is not supported on Windows, because of missing Windows support for one 
+> of the dependencies. Docker Compose option only is supported on Windows.
+
 1. Download the repository using `git clone https://github.com/OndrejSzekely/metron.git`.
 
 2. To encapsulate solution's installation (Python frameworks and other software components), it recommended to use
