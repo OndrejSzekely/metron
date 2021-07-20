@@ -54,14 +54,14 @@ development purposes, add Python dependencies using `--dev` option (`poetry add 
 
 ### Comments
 
-YAML comments convention should follow ![Python docstring](#docstring) convention.
+YAML comments convention should follow [Python docstring](#docstring) convention.
 
 ### Config Values Validation
 
 Metron does not use any main all YAML config parameters validation routine. Hydra does validation of expected config
 parameters and their type. In the code, configuration variable is accessed whenever is needed using specific decorator,
 applied on a function or class method. It passes the configuration variable as the first parameter in the function /
-class method. Therefore, the same principle as in ![Parameters Validation]
+class method. Therefore, the same principle as in [Parameters Validation]
 (#parameters-validation) is followed. The function / class method has to validate required config parameter values and
 if the requirements are not met, raise `ValueError` with custom message referring to the particular YAML config
 parameter.
