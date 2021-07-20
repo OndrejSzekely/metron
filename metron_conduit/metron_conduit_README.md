@@ -75,10 +75,12 @@ from `video_streamer/base_streamer_worker. yaml`):
   broadcasted per several seconds. *The recommended range is between 0.5 and 5.*
 - `address`: IP/domain address of Metron Conduit host. String representation.
 - `port`: Port on which streaming to Metron Core is served. String representation.
-- `com_protocol`: Async NetGear [communication protocol type](https://abhitronix.github.
-  io/vidgear/latest/gears/netgear_async/params/#protocol). Value is `"tcp"` or `"ipc"`.
-- `com_pattern`: Asnyc NetGear [communication pattern type](https://abhitronix.github.
-  io/vidgear/latest/gears/netgear_async/params/#pattern). Value is one of `0`, `1`, `2` or `3` options.
+- `com_protocol`: Async NetGear
+  [communication protocol type](https://abhitronix.github.io/vidgear/latest/gears/netgear_async/params/#protocol). Value
+  is `"tcp"` or `"ipc"`.
+- `com_pattern`: Asnyc NetGear
+  [communication pattern type](https://abhitronix.github.io/vidgear/latest/gears/netgear_async/params/#pattern). Value
+  is one of `0`, `1`, `2` or `3` options.
 
 `video_streamer/mshine_streamer_worker.yaml` (overriding base configuration
 from `video_streamer/base_streamer_worker. yaml`):
@@ -95,10 +97,12 @@ from `video_streamer/base_streamer_worker. yaml`):
   10 and 30.*
 - `address`: IP/domain address of Metron Conduit host. String representation.
 - `port`: Port on which streaming to Metron Shine is served. String representation.
-- `com_protocol`: Async NetGear [communication protocol type](https://abhitronix.github.
-  io/vidgear/latest/gears/netgear_async/params/#protocol). Value is `"tcp"` or `"ipc"`.
-- `com_pattern`: Asnyc NetGear [communication pattern type](https://abhitronix.github.
-  io/vidgear/latest/gears/netgear_async/params/#pattern). Value is one of `0`, `1`, `2` or `3` options.
+- `com_protocol`: Async NetGear
+  [communication protocol type](https://abhitronix.github.io/vidgear/latest/gears/netgear_async/params/#protocol). Value
+  is `"tcp"` or `"ipc"`.
+- `com_pattern`: Asnyc NetGear
+  [communication pattern type](https://abhitronix.github.io/vidgear/latest/gears/netgear_async/params/#pattern). Value
+  is one of `0`, `1`, `2` or `3` options.
 
 ## Demo App
 
@@ -145,7 +149,7 @@ root folder and run following command:
 > ##### :warning: Attention :exclamation: :raised_hands: :exclamation:
 > To run the receiver application on the host, all Metron's dependencies have to be installed on a bare metal or in
 > a virtual environment and the virtual environment has to attached into the console.
-> See [Development Installation: Option 2](../docs/project_installation.md#option-2:-using-bare-metal)
+> See [Development Installation: Option 2](../docs/project_installation.md#option-2-using-bare-metal)
 
 ```shell
 python demo/metron_conduit_receiver.py -t docker_host -p 13101
