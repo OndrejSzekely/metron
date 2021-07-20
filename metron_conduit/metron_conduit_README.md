@@ -15,7 +15,7 @@ Please read [Hydra docs](https://hydra.cc/docs/1.0/intro) to better understand c
 config files, etc...
 
 **To run Metron Conduit, there must be no missing configuration parameters in the composed Hydra config object, see
-![Running Commands](#running-commands) section. Config parameters which are missing and have to be defined by user are
+[Running Commands](#running-commands) section. Config parameters which are missing and have to be defined by user are
 highlighted via :pencil2::heavy_exclamation_mark:. Other config parameters are preset and do not need to be changed to
 make it run.**
 
