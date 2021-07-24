@@ -35,7 +35,7 @@ ADD poetry.lock .
 ADD pyproject.toml .
 
 # installing Metron Conduit
-RUN cd $METRON_DIR && poetry install
+RUN cd $METRON_DIR && poetry install --no-dev
 ENV PYTHONPATH=$METRON_DIR:
 WORKDIR $METRON_CONDUIT_DIR
 # download sample video which can be used as a demo showcase

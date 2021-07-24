@@ -7,13 +7,14 @@ authors = ["Ondřej Székely <ondra.szekely@gmail.com>"]
 [tool.poetry.dependencies]
 python = "~3.8"
 pymediainfo = "^5.1.0"
-
-[tool.poetry.dev-dependencies]
 uvloop = "^0.15.2"
 hydra-core = "^1.1.0"
 aiortc = "^1.2.0"
 vidgear = {extras = ["asyncio"], version = "^0.2.1"}
 opencv-python-headless = "^4.5.2"
+
+[tool.poetry.dev-dependencies]
+opencv-python = "^4.5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
