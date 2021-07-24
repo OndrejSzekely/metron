@@ -11,6 +11,7 @@ import cv2
 
 DOCKER_HOST_OPTION: typing.Final[str] = "docker_host"
 CONTAINER_OPTION: typing.Final[str] = "container"
+REMOTE_OPTION: typing.Final[str] = "remote"
 
 
 async def receiver_func() -> None:
@@ -45,20 +46,22 @@ def get_ip_address(host_type: str) -> typing.Optional[str]:
         return "127.0.0.1"
     if host_type == CONTAINER_OPTION:
         return socket.gethostbyname(socket.gethostname())
+    if host_type == REMOTE_OPTION:
+        return socket.gethostbyname(socket.gethostname())
 
     return None
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        prog="Metron Conduit - Demo", description="Consumes video stream provided by Metron Conduit."
+        prog="Metron Conduit - Demo Receiver", description="Consumes video stream provided by Metron Conduit."
     )
     parser.add_argument(
         "--host-type",
         "-t",
-        choices=[DOCKER_HOST_OPTION, CONTAINER_OPTION],
+        choices=[DOCKER_HOST_OPTION, CONTAINER_OPTION, REMOTE_OPTION],
         required=True,
-        help="Defines where `Metron Conduit - Demo` is run.",
+        help="Defines where `Metron Conduit - Demo Receiver` is run.",
     )
     parser.add_argument(
         "--port", "-p", type=str, required=True, help="Defines port on which Metron Conduit is streaming."
