@@ -40,7 +40,7 @@ To stop Metron press Ctrl+C and to turn it off, run following command from Metro
 docker-compose down
 ```
 
-**Metron's configuration can be changed anytime in the config files. Metron rebuilding is requiered for some 
+**Metron's configuration can be changed anytime in the config files. Metron rebuilding is requiered for some
 configuration parameters, but not for others. Details can be found in each component's README file.**
 
 ## Development Installation
@@ -70,7 +70,7 @@ Follow the general steps to install the solution or even more, go command by com
 section of each step.
 
 > ##### :warning: Attention :exclamation: :raised_hands: :exclamation:
-> Currently, this installation type is not supported on Windows, because of missing Windows support for one 
+> Currently, this installation type is not supported on Windows, because of missing Windows support for one
 > of the dependencies. Docker Compose option only is supported on Windows.
 
 1. Download the repository using `git clone https://github.com/OndrejSzekely/metron.git`.
@@ -94,8 +94,8 @@ section of each step.
 3. Install dev tools for commits validation: *Black*, *Pylint*, *Flake8*, *MyPy* and *Bandit*.
 
    When manual installation is used, use following config files which modifies default setting of the tools:
-	- `pyproject.toml`: Customized Black settings and customized Pylint settings.
-	- `.flake8`: Customized Flake8 setting.
+    - `pyproject.toml`: Customized Black settings and customized Pylint settings.
+    - `.flake8`: Customized Flake8 setting.
 
    The alternative option is using *pre-commit* tool. This tools uses Git Hooks to run automatically all the tools
    before commit making. The configuration of *pre-commit* (including tool configurations) is located in
@@ -153,7 +153,7 @@ section of each step.
    echo -e "unset PYTHONPATH\n" >> "${CONDA_PREFIX}/etc/conda/deactivate.d/env_vars.sh"
    ```
 
-8. Spawn Poetry shell. It will create a new Poetry virtual environment, if one does not exist and attach it.
+8. Create Poetry virtual environment and spawn Poetry shell.
 
    > ##### :clipboard: Remark :raised_hand:
    > If the virtual environment was created in the first step of the guide, then we have now running virtual
@@ -173,13 +173,17 @@ section of each step.
    ##### :bulb: Reference Installation Steps :point_down:
    In the attached Conda environment execute:
    ```shell
-   poetry shell
+   poetry env use python
    ```
    This creates a new virtual environment managed by Poetry. If you want to *force Poetry to use Conda's virtual
-   environment*, **which is not recommended**, then you have to run following commands:
+   environment*, **which is not recommended**, then you have to run instead following commands:
    ```shell
    poetry config virtualenvs.path ${CONDA_PREFIX}
    poetry config virtualenvs.create false
+   ```
+   Activate Metron environment:
+   ```shell
+   source metron_activate.sh
    ```
 
 9. Everything is now up and ready to run Metron's components. Be aware that you can run only one component at the time
@@ -194,14 +198,13 @@ section of each step.
 
    To run Metron's component in a new terminal session, run following commands in **Metron's root directory** to
    activate the environments:
+   
    ```shell
-   conda activate metron
-   source "$( poetry env list --full-path )/bin/activate"
+   source metron_activate.sh
    ```
    Then run the execution command for given component.
 
    To deactivate Poetry's and Conda's virtual environment run following commands:
    ```shell
-   deactivate
-   conda deactivate
+   source metron_deactivate.sh
    ```
