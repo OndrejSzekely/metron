@@ -150,7 +150,7 @@ root folder and run following command:
 > To run the receiver application on the host, all Metron's dependencies have to be installed on a bare metal or in
 > a virtual environment and the virtual environment has to attached into the console.
 > See [Development Installation: Option 2](../docs/project_installation.md#option-2-using-bare-metal)
-> 
+>
 > It is not possible to run receiver application on a host with Windows.
 
 ```shell
@@ -269,3 +269,15 @@ Module is located in `metron_conduit/video_streamer`.
 
 ![Class Diagram](../docs/images/metron_conduit_class_diagram_video_streamer.png)
 *Image: Class diagram*
+
+## Benchmarking
+
+CPU Intel Core-i7 6850K@3.6/4.1GHz (6c/12t) was used for the benchmarking. It was measured CPU usage for two streams
+broadcasting - Metron Core stream and Metron Shine stream. Streams were received on another machine in LAN. 
+Resolution and FPS was identical for both streams.
+
+| Resolution | FPS | CPU Usage (Threads) |
+|------------|-----|---------------------|
+| 1280x720   | 30  | 1                   | 
+| 1920x1080  | 15  | 1.5                 |
+| 3840x2160  | 5   | 1.5                 | 
