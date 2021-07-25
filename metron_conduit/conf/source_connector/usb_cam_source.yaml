@@ -1,0 +1,15 @@
+defaults:
+  - usb_cam_source_schema  # do not touch
+
+camera_id: ???
+cam_frame_res: ??? # has to have format: [transcoding_resolution width, transcoding_resolution height]
+cam_fps: 30
+time_delay: 2
+#cam_brightness: # uncomment config option and set a value to override camera default setting
+#cam_contrast: # uncomment config option and set a value to override camera default setting
+#cam_saturation: # uncomment config option and set a value to override camera default setting
+#cam_hue: # uncomment config option and set a value to override camera default setting
+#cam_zoom: # uncomment config option and set a value to override camera default setting
+#cam_focus: # uncomment config option and set a value to override camera default setting
+#cam_autofocus: # uncomment config option and set a value to override camera default setting
+#cam_auto_wb: # uncomment config option and set a value to override camera default setting

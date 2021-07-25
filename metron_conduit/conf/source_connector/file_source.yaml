@@ -1,0 +1,5 @@
+defaults:
+  - file_source_schema  # do not touch
+
+file_path: ???
+transcoding_resolution: ??? # has to have format: [transcoding_resolution width, transcoding_resolution height]

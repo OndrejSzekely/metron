@@ -1,0 +1,6 @@
+services:
+  metron_conduit:
+#    devices:
+#       - /dev/video0:/dev/video0
+#    volumes:
+#       - /host/folder/:/container/mapping/folder

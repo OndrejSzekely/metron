@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "metron"
+version = "0.0.0"
+description = "Metron project tackles use case of measurement of objects."
+authors = ["Ondřej Székely <ondra.szekely@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+pymediainfo = "^5.1.0"
+uvloop = "^0.15.2"
+hydra-core = "^1.1.0"
+aiortc = "^1.2.0"
+vidgear = {extras = ["asyncio"], version = "^0.2.1"}
+opencv-python-headless = "^4.5.2"
+
+[tool.poetry.dev-dependencies]
+opencv-python = "^4.5.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.messages_control]
+disable = "C0330, C0326, E0401"
+
+[tool.pylint.format]
+max-line-length = "120"
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''

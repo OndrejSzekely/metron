@@ -1,0 +1,6 @@
+defaults:
+  - metron_conduit_config_schema # do not touch
+  - source_connector: usb_cam_source
+  - video_streamer: # do not touch
+      - mshine_streamer_worker
+      - mcore_streamer_worker
