@@ -7,6 +7,14 @@ based on Python 3 and uses *VideoGear* and *NetGear* of [vidgear](https://abhitr
 framework. It sends two streams. The first high quality stream is used for computer vision and the second one, with
 lower resolution and bitrate, is used for results rendering.
 
+## Key Features
+
+:boom: efficient video streaming engine - max peak below 2 physical threads for common 2 streams scenarios
+:boom: streaming from various sources - video files, camera device
+:boom: streaming over a network
+:boom: fully configurable per a stream - FPS, resolution, etc...
+:boom: deployable on Linux, MacOS, Windows
+
 ## Configuration
 
 Metron Conduit's configuration files are located in `metron_conduit/conf` folder. Component's configuration is based on
