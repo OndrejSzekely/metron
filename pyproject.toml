@@ -14,7 +14,7 @@ vidgear = {extras = ["asyncio"], version = "^0.2.1"}
 opencv-python-headless = "^4.5.2"
 
 [tool.poetry.dev-dependencies]
-opencv-python = "^4.5.2"
+opencv-python = "^4.5.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
