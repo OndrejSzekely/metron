@@ -183,7 +183,7 @@ section of each step.
    ```
    Activate Metron environment:
    ```shell
-   source metron_activate.sh
+   source metron_activate_env.sh
    ```
 
 9. Everything is now up and ready to run Metron's components. Be aware that you can run only one component at the time
@@ -206,5 +206,5 @@ section of each step.
 
    To deactivate Poetry's and Conda's virtual environment run following commands:
    ```shell
-   source metron_deactivate.sh
+   source metron_deactivate_env.sh
    ```
