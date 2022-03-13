@@ -23,7 +23,7 @@ approaches or as well to be used for commercial Proof of Concepts.
 > During roadmap timeline gaps, the work is conducted on Metron AI research track. Take a look on 
 > [Peer Repositories](#peer-repositories) links section.
 
-### 0.2.0 (~~October~~ November - December 2021)
+### 0.2.0 (~~October - December 2021~~ March - May 2022)
 
 - [ ] setup Metron Shine component SW skeleton
 - [ ] add message broker component (Redis)
